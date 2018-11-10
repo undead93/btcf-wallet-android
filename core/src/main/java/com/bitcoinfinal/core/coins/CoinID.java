@@ -67,6 +67,7 @@ public enum CoinID {
     KHCOIN_MAIN(KhcoinMain.get()),
     KH69COIN_MAIN(KH69CoinMain.get()),
     POPULARCOIN_MAIN(PopularcoinMain.get()),
+	BITCOINFINAL_MAIN(BitcoinFinalMain.get()),
     ;
 
     private static List<CoinType> types;

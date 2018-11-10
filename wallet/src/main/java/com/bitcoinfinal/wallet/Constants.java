@@ -6,6 +6,7 @@ import com.bitcoinfinal.core.coins.AsiacoinMain;
 import com.bitcoinfinal.core.coins.AuroracoinMain;
 import com.bitcoinfinal.core.coins.BatacoinMain;
 import com.bitcoinfinal.core.coins.BitcoinMain;
+import com.bitcoinfinal.core.coins.BitcoinFinalMain;
 import com.bitcoinfinal.core.coins.BitcoinTest;
 import com.bitcoinfinal.core.coins.BlackcoinMain;
 import com.bitcoinfinal.core.coins.BurstMain;
@@ -133,6 +134,8 @@ public class Constants {
     public static final List<CoinAddress> DEFAULT_COINS_SERVERS = ImmutableList.of(
             new CoinAddress(BitcoinMain.get(),      new ServerAddress("btc-cce-1.coinomi.net", 5001),
                                                     new ServerAddress("btc-cce-2.coinomi.net", 5001)),
+			new CoinAddress(BitcoinFinalMain.get(), new ServerAddress("btcf1.ddns.net", 10001),
+													new ServerAddress("btcf2.ddns.net", 10001),
             new CoinAddress(BitcoinTest.get(),      new ServerAddress("btc-testnet-cce-1.coinomi.net", 15001),
                                                     new ServerAddress("btc-testnet-cce-2.coinomi.net", 15001)),
             new CoinAddress(DogecoinMain.get(),     new ServerAddress("doge-cce-1.coinomi.net", 5003),
@@ -274,6 +277,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.KHCOIN_MAIN.getCoinType(), R.drawable.bitcoinfinal);
         COINS_ICONS.put(CoinID.KH69COIN_MAIN.getCoinType(), R.drawable.kh69coin);
         COINS_ICONS.put(CoinID.POPULARCOIN_MAIN.getCoinType(), R.drawable.popularcoin);
+		COINS_ICONS.put(CoinID.BITCOINFINAL_MAIN.getCoinType(), R.drawable.bitcoinfinal);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -319,6 +323,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.KHCOIN_MAIN.getCoinType(), "https://khcore.com/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.KH69COIN_MAIN.getCoinType(), "https://explorer.69coin.net/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.POPULARCOIN_MAIN.getCoinType(), "http://popularcoin.com:3750/tx/%s");
+		COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://btcf.ccore.online/transaction/%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -332,6 +337,7 @@ public class Constants {
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
 //            KhcoinMain.get(),
             BitcoinMain.get(),
+			BitcoinFinalMain.get(),
 //            AsiacoinMain.get(),
 //            AuroracoinMain.get(),
 //            BatacoinMain.get(),
